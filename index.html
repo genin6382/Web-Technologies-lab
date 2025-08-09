@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Animated clouds -->
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+
+    <div class="container">
+        <div class="header">
+            <h1>🌤️ Weather App</h1>
+            <p>Get real-time weather information with beautiful charts</p>
+        </div>
+
+        <div class="search-container">
+            <div class="search-wrapper">
+                <input type="text" class="search-input" placeholder="Enter city name..." id="cityInput">
+                <div class="city-suggestions" id="citySuggestions"></div>
+            </div>
+            <button class="search-btn" onclick="getWeather()">Search</button>
+            <button class="location-btn" onclick="getUserLocation()" title="Use current location">📍</button>
+        </div>
+
+        <div id="errorMessage"></div>
+        <div id="successMessage"></div>
+        <div id="loadingMessage"></div>
+        
+        <div class="main-content" id="weatherContent"></div>
+    </div>
+</body>
+</html>
